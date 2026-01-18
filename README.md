@@ -73,3 +73,10 @@ A few things of note:
 3. This does not save any statistics between sessions. Once you reload the page or close the browser (or hit the Restart Session button) any stats and indicators will be lost. Using this myself, I haven't seen any real need to persist data across sessions, but I might look into it at some point.
 4. Yes, there's quite a bit of red and green indicators used, apologies to anyone who have trouble difereantiating those colors. It hopefully does not limit usability too much.
 
+
+## Permissions and Copyright
+Bird and squirrel vocalizations generously provided by the Macaulay Library at the Cornell Lab of Ornithology.
+
+The actual audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.
+
+All other non-copyrighted aspects of this page are CC BY-SA
