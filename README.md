@@ -79,4 +79,4 @@ Bird and squirrel vocalizations generously provided by the Macaulay Library at t
 
 The actual audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.
 
-All other non-copyrighted aspects of this page are CC BY-SA
+All other non-copyrighted aspects of this app are shared under Creative Commons: CC BY-SA
