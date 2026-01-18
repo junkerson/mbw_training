@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mountain Birdwatch Audio Flashcards</title>
+  <title>Mountain Birdwatch Audio Training</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -22,13 +22,12 @@
       <div class="grid">
         <section class="card" id="mainCard">
 
-          <div class="player" id="playerRow">
-            <!-- <button class="play-btn" id="playBtn">▶ Play</button> -->
+          <div class="player" id="playerRow">            
             <div id="audioObject"></div>
           </div>
 
           <div class="choices" id="choicesContainer" role="list">
-            <!-- choices inserted here -->
+            <!-- choices are inserted here via javascript-->
           </div>
 
           <div style="margin-top:12px;">
@@ -40,7 +39,8 @@
             <button class="small" id="nextBtn">Next</button>
           </div>
 
-          <hr style="border:none; height:1px; background:rgba(255,255,255,0.02); margin:14px 0;">
+          <hr class="normal_hr" />
+
 
 
           <div class="options">
@@ -58,16 +58,9 @@
               <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
             </div>
             
-             
-
             <div class="autoplayContainer">
               <div><input type="checkbox" id="autoPlay" checked /> Autoplay audio when new sample loads</div>
             </div>
-
-            <!-- <div class="includeNonFocusContainer">
-              <div><input type="checkbox" id="includeNonFocus" /> Include non-focus species <span class="small-muted">
-                  (updating this will reset and shuffle the queue)</span></div>
-            </div> -->
 
             <div class="trainingModeContainer">
               <div><input type="checkbox" id="trainingMode" />Selection Mode: show bird and audio clip codes in the card queue</div>
@@ -108,7 +101,7 @@
             <button class="small" id="restartBtn">Restart Session</button>
           </div>
 
-          <hr style="border:none; height:1px; background:rgba(255,255,255,0.02); margin:12px 0;">
+          <hr class="normal_hr" />
 
           <div class="queueContainer">           
             <div class="queueInstructions">
@@ -117,7 +110,11 @@
             </div>
             <div id="queueList" class="small-muted" style="margin-top:8px;"></div>
 
-            <div><br /><button class="small" id="shuffleBtn">Reset and Shuffle</button><br/><div class="small-muted"><br/>Note: Reset and Shuffle clears the cards' correct/incorrect indicators</div></div>            
+            <div>
+              <br />
+              <button class="small" id="shuffleBtn">Reset and Shuffle</button><br/>
+              <div class="small-muted"><br/>Note: Reset and Shuffle clears the cards' correct/incorrect indicators</div>
+            </div>            
           </div>
         </aside>
       </div>
@@ -162,7 +159,7 @@
     </div>
   </div>
 
-
+  <!-- initiate the brains and kick things off -->
   <script type="module" src="main.js"></script>
 
 </body>
