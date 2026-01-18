@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mountain Birdwatch Audio Flashcards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="app" role="application">
+      <header>
+        <h1>Mountain Birdwatch Audio Training</h1>
+        <div class="small-muted">
+          Birds marked with <span class="focus-ind"></span> are MBW focus species<br />
+          Birds marked with <span class="not-focus-ind"></span> are not focus species but have similar calls
+        </div>
+      </header>
+
+      <div class="grid">
+        <section class="card" id="mainCard">
+
+          <div class="player" id="playerRow">
+            <!-- <button class="play-btn" id="playBtn">▶ Play</button> -->
+            <div id="audioObject"></div>
+          </div>
+
+          <div class="choices" id="choicesContainer" role="list">
+            <!-- choices inserted here -->
+          </div>
+
+          <div style="margin-top:12px;">
+            <div id="feedback" class="small-muted" aria-live="assertive"></div>
+          </div>
+
+          <div class="controls">
+            <button class="small" id="prevBtn">Previous</button>
+            <button class="small" id="nextBtn">Next</button>
+          </div>
+
+          <hr style="border:none; height:1px; background:rgba(255,255,255,0.02); margin:14px 0;">
+
+
+          <div class="options">
+            <h3>Options</h3>
+
+            <div class="nameOrCodesContainer">
+              <div><input type="radio" name="nameOrCode" id="useNames" value="useNames" class="small" checked /> <label for="useNames">Show Bird Names</label></div><br>
+              <div><input type="radio" name="nameOrCode" id="useCodes" value="useCodes" class="small" /> <label for="useCodes">Show 4-Character Codes</label></div>
+            </div>
+
+            <div class="birdSelectionContiner">
+              <div><input type="radio" name="birdSelection" id="focus" value="focus" class="small" checked> <label for="focus">Focus Birds Only</label></div>
+              <div><input type="radio" name="birdSelection" id="nonFocus" value="nonFocus" class="small"> <label for="nonFocus">Non-Focus Birds Only</label></div>              
+              <div><input type="radio" name="birdSelection" id="all" value="all" class="small"> <label for="all">Focus and Non-Focus Birds</label></div>                         
+              <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
+            </div>
+            
+             
+
+            <div class="autoplayContainer">
+              <div><input type="checkbox" id="autoPlay" checked /> Autoplay audio when new sample loads</div>
+            </div>
+
+            <!-- <div class="includeNonFocusContainer">
+              <div><input type="checkbox" id="includeNonFocus" /> Include non-focus species <span class="small-muted">
+                  (updating this will reset and shuffle the queue)</span></div>
+            </div> -->
+
+            <div class="trainingModeContainer">
+              <div><input type="checkbox" id="trainingMode" />Selection Mode: show bird and audio clip codes in the card queue</div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="card">
+          <div class="stats">
+            <div class="stat-row">
+              <div><strong>Session Stats</strong></div>
+              <div></div>
+            </div>
+            <div class="stat-row">
+              <div>Total</div>
+              <div id="statTotal">0</div>
+            </div>
+            <div class="stat-row">
+              <div>Correct</div>
+              <div id="statCorrect">0</div>
+            </div>
+            <div class="stat-row">
+              <div>Incorrect</div>
+              <div id="statIncorrect">0</div>
+            </div>
+            <div class="stat-row">
+              <div>Accuracy</div>
+              <div id="statAccuracy">0%</div>
+            </div>
+            <div class="stat-row">
+              <div>Current streak</div>
+              <div id="statStreak">0</div>
+            </div>
+            <div class="stat-row">
+              <div>Best streak</div>
+              <div id="statBest">0</div>
+            </div>
+            <button class="small" id="restartBtn">Restart Session</button>
+          </div>
+
+          <hr style="border:none; height:1px; background:rgba(255,255,255,0.02); margin:12px 0;">
+
+          <div class="queueContainer">           
+            <div class="queueInstructions">
+              <strong>Queue</strong><br />
+              <span class="small-muted">Click on a card in the queue to go to that item.</span><br />
+            </div>
+            <div id="queueList" class="small-muted" style="margin-top:8px;"></div>
+
+            <div><br /><button class="small" id="shuffleBtn">Reset and Shuffle</button><br/><div class="small-muted"><br/>Note: Reset and Shuffle clears the cards' correct/incorrect indicators</div></div>            
+          </div>
+        </aside>
+      </div>
+
+      <footer>
+        <div class="small-muted">Space will play/pause audio<br />The D key or Right Arrow goes to next card. The A key or Left Arrow goes to
+          previous card.</div>
+        <div class="small-muted">This session does not persist after closing the page</div>
+      </footer>
+
+    </div><!-- END: div.container -->
+
+    <div class="about copyright">
+      <h2>About</h2>
+      <p>
+        This page was created to aid in learning the vocalizations of several bird species (and red squirrels).
+        The trigger for creation was the author's introduction to the Mountain Birdwatch Project which is a yearly survey of high-mountain bird species in the Northeastern area
+        of the U.S.
+      </p>
+      <p>
+        The Mountain Birdwatch project is organized and maintained by the Vermont Center for Ecostudies:<br/>
+        <a href="https://vtecostudies.org/projects/mountains/mountain-birdwatch/">https://vtecostudies.org/projects/mountains/mountain-birdwatch/</a>
+      </p>
+      <p class="note">
+        <strong>Note:</strong><br />This page is the work of <a href="https://github.com/junkerson">Junkerson</a>.<br/>
+        The Vermont Center for Ecostudies is not involved in its creation or maintenance.
+      </p>
+
+      <h2>Audio Clips</h2>
+      <p>Bird and squirrel vocalizations generously provided by the Macaulay Library at the Cornell Lab of Ornithology</p>
+      <p>The actual audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.</p>
+      <p>All other non-copyrighted aspects of this page are CC BY-SA</p>
+      <p><img src="CC_BY-SA_icon.svg.png" height="25px" /></p>
+
+      <h2>Source</h2>
+      <p>
+        The source for this page can be found on Github:<br />
+        <a href="https://github.com/junkerson/mbw_training">https://github.com/junkerson/mbw_training</a>
+      </p>      
+    </div>
+  </div>
+
+
+  <script type="module" src="main.js"></script>
+
+</body>
+
+</html>
