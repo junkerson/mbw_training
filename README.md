@@ -2,7 +2,7 @@
 
 This is a simple, standalone, one-page browser app that is essentially an audio flashcard tool designed to help with training for the Mountain Birdwatch Project.
 
-Mountain Birdwatch is a citizen scientist project where volunteers journey to mountain tops around the northeastern United States every June and count how many birds of the focus species they can hear or see.
+Mountain Birdwatch is a citizen science project where volunteers scale mountain peaks all around the northeastern United States every June and count how many birds of the focus species they can hear or see.
 This app aims to help train the volunteers' ears to recognize the calls of the desired birds, as well as identify a few that sound similar but are not part of the study.
 
 Additional information about the project, and the Vermont Center for Ecostudies which runs it, can be found here: https://vtecostudies.org/projects/mountains/mountain-birdwatch/
@@ -13,7 +13,9 @@ Additional information about the project, and the Vermont Center for Ecostudies 
 
 
 ## Installation
-The app is a simple html/javascript program that should run in any modern web browser.
+The app is an html/javascript program that should run in any modern web browser.
+It is best suited for computer screens due to size and layout.
+It might be usable on a tablet, but probably would be difficult to use on a mobile device with its smaller screen.
 No internet connectivity is required.
 
 To "install", do the following:
