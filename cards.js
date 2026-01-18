@@ -1,6 +1,16 @@
 // Build the cards with all focus and non-focus species
 export const CardList = [];
 
+
+// The following loops are dependent on the naming scheme and location of the training clips
+// The filename format is the standard 4-character code, and underscore, and a two digit count value for that bird
+// For example, the Black-capped Chickadee's code is BCCH and there are 3 clips. So this file needs to load:
+//    - BCCH_01.mp3
+//    - BCCH_02.mp3
+//    - BCCH_03.mp3
+// The code's used can be found here: https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
+  
+
 //BBWA Loop
 for(let i=1; i<=2; ++i){
   CardList.push({
@@ -218,7 +228,8 @@ for(let i=1; i<=2; ++i){
 }
 
 
-
+// This is the list of the focus and sound-alike non-focus birds used in the app
+// The guess options are bult from this list
 export const BirdChoices = [
     { focusSpecies: true,  code: "BITH", name: "Bicknell's Thrush" }
   , { focusSpecies: true,  code: "SWTH", name: "Swainson's Thrush" }

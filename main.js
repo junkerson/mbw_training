@@ -1,9 +1,9 @@
 //imports
 import { CardList, BirdChoices as birdChoices } from './cards.js';
 
+// =============================
 // Handles to DOM elements
 // =============================
-// const playBtn = document.getElementById('playBtn'); //playBtn was replaced with built-in controls of the Audio object in the interface
 const audioObject = document.getElementById('audioObject');
 const choicesContainer = document.getElementById('choicesContainer');
 const feedback = document.getElementById('feedback');
@@ -20,7 +20,6 @@ const statBest = document.getElementById('statBest');
 const queueList = document.getElementById('queueList');
 const nameOrCodeRadios = document.querySelectorAll('input[name="nameOrCode"]');
 const autoPlay = document.getElementById('autoPlay');
-// const includeNonFocus = document.getElementById('includeNonFocus');
 const birdSelectionRadios = document.querySelectorAll('input[name="birdSelection"]');
 const trainingMode = document.getElementById('trainingMode');
 
@@ -49,17 +48,24 @@ cardsAllBirds.forEach(b => {
   }
 })
 
+// =============================
+// Initialize queue
+// =============================
 let queue = shuffleArray(cards.map(c => c.id));
 let currentIndex = 0;
 let queueData = [];
 resetQueueData();
 
-//init Audio object for playback
+// =============================
+// Initialize Audio object for playback
+// =============================
 let audio = new Audio();
 audio.controls = true;
 audioObject.appendChild(audio);
 
-//init stats
+// =============================
+// Initialize defaults
+// =============================
 let stats = {
   total: 0,
   correct: 0,
@@ -67,33 +73,25 @@ let stats = {
   streak: 0,
   bestStreak: 0
 };
-
 // init answer items
 let answeredThisCard = false;
 let useNameOrCodes = 'useNames';
 let birdSelection = 'focus';
 
 //init the cards population
-birdSelectionOnChangeHandler(null,birdSelection);
-
-// =============================
-// kick off the  app
-// =============================
-renderQueue();
-loadCurrentCard();
+birdSelectionOnChangeHandler(null,birdSelection); //using this handler to keep things DRY
 
 
 // =============================
 // Event listeners
 // =============================
-// playBtn.addEventListener('click', togglePlay);
 prevBtn.addEventListener('click', goPrev);
 nextBtn.addEventListener('click', goNext);
 shuffleBtn.addEventListener('click', () => { queue = shuffleArray(queue); currentIndex = 0; animateButton(shuffleBtn); animateQueueList(); resetQueueData(); renderQueue(); loadCurrentCard(); });
 restartBtn.addEventListener('click', restartSession);
 audio.addEventListener('ended', () => { });
 
-// listen for spacebar key to Play/Pause audio
+// listen for key presses for play/pause, and moving to next or previous card
 document.addEventListener('keydown', (e) => {
   //Space: toggle audio playback
   if (e.code === 'Space' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
@@ -101,13 +99,13 @@ document.addEventListener('keydown', (e) => {
     togglePlay();
   }
 
-  //Right Arrow: go to next card
+  //Right Arrow or D: go to next card
   if ( (e.code === 'ArrowRight' || e.code === 'KeyD') && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
     e.preventDefault();
     goNext();
   }
 
-  //Left Arrow: go to next card
+  //Left Arrow or A: go to previous card
   if ( (e.code === 'ArrowLeft' || e.code === 'KeyA') && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
     e.preventDefault();
     goPrev();
@@ -154,6 +152,8 @@ function birdSelectionOnChangeHandler(event, bSel) {
 
 //Handle training mode change
 trainingMode.addEventListener('change', function() {
+  // the two functions below look at the checkbox status to determine display
+  // all that's needed is to call them and let them do their thing
   loadCurrentCard();
   renderQueue();
 });
@@ -162,31 +162,43 @@ trainingMode.addEventListener('change', function() {
 // =============================
 // Functions
 // =============================
+
+//Loads the current card in preparation for the user's guess
 function loadCurrentCard() {
+  //reset indicators and feedback
   answeredThisCard = false;
   feedback.innerHTML = '&nbsp;';
   feedback.className = '';
   if (queue.length === 0) {
     choicesContainer.innerHTML = '';
-    // playBtn.disabled = true;
     return;
   }
-  // playBtn.disabled = false;
+  //card tracking
   const cardId = queue[currentIndex % queue.length];
   const card = cards.find(c => c.id === cardId);
   if (!card) return;
+  //prep audio clip
   audio.src = card.audioUrl;
   audio.load();
+  //show on UI
   renderChoices(card);
 }
 
+//Render the choice options to the UI
 function renderChoices(card) {
+  //reset the choices
   choicesContainer.innerHTML = '';
 
+  //loop through all the options and display the guess options that match the current mode
   birdChoices.forEach(bird => {
     //show focus, non-focus, or all birds
-    if( (birdSelection==='all') || (birdSelection==='focus' && bird.focusSpecies === true) || (birdSelection==='nonFocus' && bird.focusSpecies === false) ) {
+    if(  (birdSelection==='all') 
+      || (birdSelection==='focus' && bird.focusSpecies === true)
+      || (birdSelection==='nonFocus' && bird.focusSpecies === false)
+    ) {
+      //create new element
       const btn = document.createElement('button');
+      //add the appropriate css classes
       if (bird.focusSpecies === true) {
         btn.className = `choice focus ${bird.code}`;
       } else if (bird.focusSpecies === false) {
@@ -194,105 +206,139 @@ function renderChoices(card) {
       } else {
         btn.className = `choice ${bird.code}`;
       }
+
       btn.type = 'button';
+
+      //set the label as appropriate for current options
       if(useNameOrCodes==='useNames') {
         btn.textContent = bird.name;
       } else if(useNameOrCodes==='useCodes') {
         btn.textContent = bird.code;
       }
       
-      // btn.textContent = bird.code;
+      //add click listener
       btn.addEventListener('click', () => handleChoice(card, bird.code, btn));
+
+      //add this button to the DOM
       choicesContainer.appendChild(btn);    
     }        
   })
   renderQueue()
 }
 
+//Handle when the user makes a guess
 function handleChoice(card, selected, btnEl) {
-  if (answeredThisCard) return;
+  //make sure we ignore multiple guesses
+  if (answeredThisCard) {
+    return;
+  }
 
+  //This is the first guess, flag it and update stats
   answeredThisCard = true;
-
   stats.total += 1;
-
   queueData[currentIndex].guesses += 1;
-
-  
-  //Correctly answered
+    
+  //Was it answered correctly?
   if (selected === card.answerCode) {
+    //update stats
     stats.correct += 1;
     stats.streak += 1;
     stats.bestStreak = Math.max(stats.bestStreak, stats.streak);
+    //add visual feedback 
     btnEl.classList.add('correct');
     feedback.textContent =`Correct! ${card.answerName} (${card.answerCode})`;
     feedback.style.color = '';
     feedback.className = 'correct';
+    //update queue card stats
     queueData[currentIndex].correct += 1;
   
-  //Incorrectly Answered
+  //Was it answered incorrectly?
   } else {
+    //update stats
     stats.incorrect += 1;
     stats.streak = 0;
     btnEl.classList.add('incorrect');
-
     // highlight correct choice    
     document.getElementsByClassName(card.answerCode)[0].classList.add('correct')
-
+    //add visual feedback 
     feedback.textContent = `Incorrect. Correct answer: ${card.answerName} (${card.answerCode})`;
     feedback.style.color = '';
     feedback.className = 'incorrect';
+    //update queue card stats
     queueData[currentIndex].incorrect += 1;
   }
+
+  //Make feedback visible in UI
   updateStatsDisplay();
   renderQueue()
 }
 
+//Toggles the playback of the audio clip
 function togglePlay() {
-  if (!audio.src) return;
+  //ensure the audio DOM object is available
+  if (!audio.src) {
+    return;
+  }
+
+  //toggle play/pause
   if (audio.paused) {
     audio.play().catch(err => {
-      feedback.textContent = 'Playback failed. Try a different file or allow autoplay.';
+      feedback.textContent = 'Playback failed. Try a different file or allow autoplay.'; //generic message
     });
   } else {
     audio.pause();
   }
 }
 
+//Go to the next card in the queue
 function goNext() {
+  //make sure there's something in queue
   if (queue.length === 0) return;
+
+  //Increment index counter. Loop to first card if off the end
   currentIndex = (currentIndex + 1) % queue.length;
   loadCurrentCard();
+
+  //autoplay if enabled
   if(autoPlay.checked) {
     audio.pause();
     audio.play();
   }
+
+  //show that button was clicked (helpful when using key shortcuts)
   animateButton(nextBtn);
 }
 
+
+//Go to the previous card in the queue
 function goPrev() {
+  //make sure there's something in queue
   if (queue.length === 0) return;
+
+  //Increment index counter. Loop to first card if off the end
   currentIndex = (currentIndex - 1 + queue.length) % queue.length;
   loadCurrentCard();
+
+  //autoplay if enabled
   if(autoPlay.checked) {
     audio.pause();
     audio.play();
   }
+
+  //show that button was clicked (helpful when using key shortcuts)
   animateButton(prevBtn);
 }
 
-function animateButton(el) {
-  el.classList.remove("buttonClickAnim");  
-  void el.offsetWidth;
-  el.classList.add("buttonClickAnim");
-}
-
+//Clear everything and start over
 function restartSession() {
+  //Make sure user really wants to
   if( confirm("Are you sure you want to reset all session statistics?") ) {
 
+    //show that button was pressed and that the queue is reset
     animateButton(restartBtn);
     animateQueueList();
 
+    //reset stats and defaults then reload the interface
     stats = { total: 0, correct: 0, incorrect: 0, streak: 0, bestStreak: 0 };
     queue = cards.map(c => c.id);
     queue = shuffleArray(queue);
@@ -307,12 +353,7 @@ function restartSession() {
   }
 }
 
-function animateQueueList() {
-  queueList.classList.remove("queueShuffleAnim");  
-  void queueList.offsetWidth;
-  queueList.classList.add("queueShuffleAnim");
-}
-
+// Display the Statistics in the UI
 function updateStatsDisplay() {
   statTotal.textContent = stats.total;
   statCorrect.textContent = stats.correct;
@@ -323,6 +364,8 @@ function updateStatsDisplay() {
   statBest.textContent = stats.bestStreak;
 }
 
+
+// Display the current queue to the UI
 function renderQueue() {
  
   //clear queue contents
@@ -330,17 +373,20 @@ function renderQueue() {
   
   //create new cards
   for(let i=0; i<queue.length; ++i) {    
+    //load data
     let curCard = cards.find(c => { return c.id===queue[i]})
 
-    let cardIncorrectClass = queueData[i].incorrect>0 ? 'cardIncorrect' : '';
+    //create display element and add appropriate classes
     let qc = document.createElement('div');
     qc.classList.add('queueCard');
     i==currentIndex ? qc.classList.add('currentCard') : null;
     queueData[i].correct>0 ? qc.classList.add('cardCorrect') : null
     queueData[i].incorrect>0 ? qc.classList.add('cardIncorrect') : null;
 
+    //set appropriate card label
     qc.textContent = trainingMode.checked ? curCard.title : i+1;
 
+    //attach a click event so that the user can go directly to that card
     qc.addEventListener('click',() => { 
       currentIndex=i;
       loadCurrentCard(); 
@@ -350,24 +396,41 @@ function renderQueue() {
       }
     });  
 
+    // attach this card to DOM
     queueList.appendChild(qc);
   }  
 }
 
+//Reset the data that keeps track of the card guesses stats
 function resetQueueData() {
-
-
-  //clear array
+  //clear queue data array
   queueData = null;
   queueData = [];
 
-  //rebuild
+  //rebuild the data with defaults
   for ( let i=0; i<queue.length; ++i ) {
     queueData.push({guesses:0,correct:0,incorrect:0});
   }
 }
 
-// Fisher-Yates shuffle for shuffling array
+//Show a visual indication that queuewas reset
+//Essentially just attaching a CSS class that plays a CSS animation
+function animateQueueList() {
+  queueList.classList.remove("queueShuffleAnim");  
+  void queueList.offsetWidth; //silly CSS voodoo to allow the animation to be initiated more than once...
+  queueList.classList.add("queueShuffleAnim");
+}
+
+//Show a visual indication that button was pressed
+//Essentially just attaching a CSS class that plays a CSS animation
+function animateButton(el) {
+  el.classList.remove("buttonClickAnim");  
+  void el.offsetWidth; //silly CSS voodoo to allow the animation to be initiated more than once...
+  el.classList.add("buttonClickAnim");
+}
+
+// Some implimentation of Fisher-Yates shuffle for shuffling array...
+// https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
 function shuffleArray(arr) {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -378,15 +441,9 @@ function shuffleArray(arr) {
 }
 
 
-// Initialize stats display
+// =============================
+// kick off the app
+// =============================
+renderQueue();
+loadCurrentCard();
 updateStatsDisplay();
-
-//Deal with Info modal display
-function toggleInfo(event) {
-  if(infoContainer.style.visibility === 'visible') {
-    infoContainer.style.visibility = 'hidden';
-  } else {
-    infoContainer.style.visibility = 'visible';
-  }
-
-}
