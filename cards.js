@@ -1,7 +1,6 @@
 // Build the cards with all focus and non-focus species
 export const CardList = [];
 
-
 // The following loops are dependent on the naming scheme and location of the training clips
 // The filename format is the standard 4-character code, and underscore, and a two digit count value for that bird
 // For example, the Black-capped Chickadee's code is BCCH and there are 3 clips. So this file needs to load:
@@ -10,7 +9,6 @@ export const CardList = [];
 //    - BCCH_03.mp3
 // The code's used can be found here: https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
   
-
 //BBWA Loop
 for(let i=1; i<=2; ++i){
   CardList.push({
