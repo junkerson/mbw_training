@@ -230,7 +230,7 @@ function handleChoice(card, selected, btnEl) {
     feedback.className = 'correct';
     queueData[currentIndex].correct += 1;
   
-    //Incorrectly Answered
+  //Incorrectly Answered
   } else {
     stats.incorrect += 1;
     stats.streak = 0;

@@ -123,6 +123,8 @@ h2, h3 {
   align-content: stretch;
 }
 
+/* 
+Replaced with built-in controls from html Audio object
 .play-btn {
   background: var(--glass);
   border: 1px solid rgba(255, 255, 255, 0.03);
@@ -136,6 +138,7 @@ h2, h3 {
   background: linear-gradient(90deg, rgba(6, 182, 212, 0.12), rgba(6, 182, 212, 0.06));
   box-shadow: 0 6px 18px rgba(6, 182, 212, 0.06);
 }
+*/
 
 #audioObject, audio {
   background: var(--card);
@@ -307,11 +310,9 @@ input[type="file"] {
   background: linear-gradient(90deg, #16a34a, #16a34a 50%, #c33 50%, #c33);
 }
 
-
 #shuffleBtn {
   width: 100%;
 }
-
 
 footer {
   margin-top: 14px;
@@ -320,9 +321,7 @@ footer {
   align-items: center;
 }
 
-
-
-
+/* About section */
 .about {
   margin: 45px 25px;
   width:750px;
