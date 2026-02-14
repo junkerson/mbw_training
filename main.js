@@ -392,7 +392,7 @@ function goPrev() {
   //make sure there's something in queue
   if (queue.length === 0) return;
 
-  //Increment index counter. Loop to first card if off the end
+  //Decrement index counter. Loop to last card if off the beginning
   currentIndex = (currentIndex - 1 + queue.length) % queue.length;
   loadCurrentCard();
 
