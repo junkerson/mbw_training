@@ -40,7 +40,7 @@ for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RCKI $
 //RESQ loop
 for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RESQ ${i}`, audioUrl: `./clips_vce/RESQ_0${i}.mp3`, answerCode: "RESQ", answerName: "Red Squirrel", focusSpecies: true })}
 //SWTH loop
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", focusSpecies: true })}
+for(let i=1; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", focusSpecies: true })}
 //VEER loop
 for(let i=1; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", focusSpecies: false })}
 //WIWR loop

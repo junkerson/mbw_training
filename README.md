@@ -83,6 +83,7 @@ A few things of note:
 ## Permissions and Copyright
 Bird and squirrel vocalizations generously provided by the Macaulay Library at the Cornell Lab of Ornithology.
 
-The actual audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.
+Most of the audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.  
+SWTH Rattle Call clips courtesy of: Steve Hampton, XC579696. Accessible at www.xeno-canto.org/579696
 
-All other non-copyrighted aspects of this app are shared under Creative Commons: CC BY-SA
+All other non-copyrighted aspects of this app are shared under Creative Commons: CC BY-NC-SA
