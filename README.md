@@ -77,13 +77,13 @@ A few things of note:
 1. Sometimes, especially when playing the first clip after loading the app, it takes several seconds to start playing the audio. Usually, any subsequent clips play fine without delay. I'll troubleshoot at some point to see if I can improve the performance, but at the moment I just consider it a minor incovenience.
 2. The key shortcuts do not work if you've clicked on one of the option items and it still has focus. Click on a blank part of the screen and the key shortcuts should start working again. I'll see if I can figure out a way to get around that issue.
 3. This app does not save any statistics between sessions. Once you reload the page or close the browser (or hit the Restart Session button) any stats and indicators will be lost. Using this myself, I haven't seen any real need to persist data across sessions, but I might look into ading that feature at some point.
-4. Yes, there's quite a bit of red and green indicators used, Apologies to anyone who has trouble differentiating those colors. It hopefully does not limit usability too much.
+4. Yes, there's quite a bit of red and green indicators used. Apologies to anyone who has trouble differentiating those colors. It hopefully does not limit usability too much.
 
 
 ## Permissions and Copyright
 Bird and squirrel vocalizations generously provided by the Macaulay Library at the Cornell Lab of Ornithology.
 
 Most of the audio clips were sourced from Vermont Center for Ecostudies' Mountain Birdwatch training materials.  
-SWTH Rattle Call clips courtesy of: Steve Hampton, XC579696. Accessible at www.xeno-canto.org/579696
+The SWTH Rattle Call clips are courtesy of: Steve Hampton, XC579696. Accessible at www.xeno-canto.org/579696
 
 All other non-copyrighted aspects of this app are shared under Creative Commons: CC BY-NC-SA
