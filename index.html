@@ -14,8 +14,8 @@
       <header>
         <h1>Mountain Birdwatch Audio Training</h1>
         <div class="small-muted">
-          Birds marked with <span class="focus-ind"></span> are MBW focus species<br />
-          Birds marked with <span class="not-focus-ind"></span> are not focus species but have similar calls
+          Species marked with <span class="focal-ind"></span> are MBW focal species<br />
+          Species marked with <span class="not-focal-ind"></span> are not focal species but have similar calls
         </div>
       </header>
 
@@ -47,30 +47,30 @@
             <h3>Options</h3>
 
             <div class="nameOrCodesContainer">
-              <div><input type="radio" name="nameOrCode" id="useNames" value="useNames" class="small" checked /> <label for="useNames">Show Bird Names</label></div><br>
-              <div><input type="radio" name="nameOrCode" id="useCodes" value="useCodes" class="small" /> <label for="useCodes">Show 4-Character Codes</label></div>
+              <div><input type="radio" name="nameOrCode" id="useNames" value="useNames" class="small" checked /> <label for="useNames">Show Species Names</label></div><br>
+              <div><input type="radio" name="nameOrCode" id="useCodes" value="useCodes" class="small" /> <label for="useCodes">Show Species Codes</label></div>
             </div>
 
-            <div class="birdSelectionContiner">
-              <div><input type="radio" name="birdSelection" id="focus" value="focus" class="small" checked> <label for="focus">Focus Birds Only</label></div>
-              <div><input type="radio" name="birdSelection" id="nonFocus" value="nonFocus" class="small"> <label for="nonFocus">Non-Focus Birds Only</label></div>              
-              <div><input type="radio" name="birdSelection" id="all" value="all" class="small"> <label for="all">Focus and Non-Focus Birds</label></div>                         
+            <div class="birdSelectionContainer">
+              <div><input type="radio" name="birdSelection" id="focal" value="focal" class="small" checked> <label for="focal">Focal Species Only</label></div>
+              <div><input type="radio" name="birdSelection" id="nonFocal" value="nonFocal" class="small"> <label for="nonFocal">Non-Focal Species Only</label></div>              
+              <div><input type="radio" name="birdSelection" id="all-species" value="all" class="small"> <label for="all">All Species</label></div>                         
               <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
             </div>
 
             <div class="vocalizationTypeContainer">
-              <div><input type="radio" name="vocalizationType" id="all" value="songcall" class="small" checked> <label for="all">All Vocalizations</label></div>
-              <div><input type="radio" name="vocalizationType" id="song" value="song" class="small"> <label for="nonFocus">Songs Only</label></div>              
+              <div><input type="radio" name="vocalizationType" id="all-vocalizations" value="songcall" class="small" checked> <label for="all">All Vocalizations</label></div>
+              <div><input type="radio" name="vocalizationType" id="song" value="song" class="small"> <label for="nonFocal">Songs Only</label></div>              
               <div><input type="radio" name="vocalizationType" id="call" value="call" class="small"> <label for="all">Calls Only</label></div>
               <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
             </div>
             
             <div class="autoplayContainer">
-              <div><input type="checkbox" id="autoPlay" checked /> Autoplay audio when new sample loads</div>
+              <div><input type="checkbox" id="autoPlay" checked /> Autoplay when new sample loads</div>
             </div>
 
             <div class="trainingModeContainer">
-              <div><input type="checkbox" id="trainingMode" />Show bird and audio codes in the card queue. Cards are listed alphabetically.</div>
+              <div><input type="checkbox" id="trainingMode" />Card queue: reveal species codes & sort alphabetically</div>
             </div>
           </div>
         </section>
@@ -130,6 +130,9 @@
         <div class="small-muted">
           The D key or Right Arrow goes to next card. The A key or Left Arrow goes to previous card. Space will play/pause audio<br />
           Note: These shortcuts will not work if the focus is on any of the option items. Click anywhere else to clear focus.
+          <br/><br/>
+          To adjust the app display size, use the standard browser zoom shortcuts:<br/>
+          <span class="zoom-instructions">Increase zoom: <strong>Ctrl/Cmd + +</strong></span> <span class="zoom-instructions">Decrease zoom: <strong>Ctrl/Cmd + -</strong></span> <span class="zoom-instructions">Reset zoom: <strong>Ctrl/Cmd + 0</strong></span>
         </div>
         <div class="small-muted">This session does not persist after closing the page</div>
       </footer>

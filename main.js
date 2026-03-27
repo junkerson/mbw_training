@@ -2,7 +2,7 @@
 //Build the Data Structures:
 //==============================================================================
 
-// Build the cards with all focus and non-focus species
+// Build the cards with all focal and non-focal species
 const CardList = [];
 
 // The following loops are dependent on the naming scheme and location of the training clips
@@ -14,74 +14,74 @@ const CardList = [];
 // The code's used can be found here: https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
 //BBWA
-for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BBWA ${i}`, audioUrl: `./clips_vce/BBWA_0${i}.mp3`, answerCode: "BBWA", answerName: "Bay-breasted Warbler", type:"song", focusSpecies: false })}
+for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BBWA ${i}`, audioUrl: `./clips_vce/BBWA_0${i}.mp3`, answerCode: "BBWA", answerName: "Bay-breasted Warbler", type:"song", focalSpecies: false })}
 //BCCH
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BCCH ${i}`, audioUrl: `./clips_vce/BCCH_0${i}.mp3`, answerCode: "BCCH", answerName: "Black-capped Chickadee", type:"song", focusSpecies: true })}
-for(let i=2; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BCCH ${i}`, audioUrl: `./clips_vce/BCCH_0${i}.mp3`, answerCode: "BCCH", answerName: "Black-capped Chickadee", type:"call", focusSpecies: true })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BCCH ${i}`, audioUrl: `./clips_vce/BCCH_0${i}.mp3`, answerCode: "BCCH", answerName: "Black-capped Chickadee", type:"song", focalSpecies: true })}
+for(let i=2; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BCCH ${i}`, audioUrl: `./clips_vce/BCCH_0${i}.mp3`, answerCode: "BCCH", answerName: "Black-capped Chickadee", type:"call", focalSpecies: true })}
 //BITH
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BITH ${i}`, audioUrl: `./clips_vce/BITH_0${i}.mp3`, answerCode: "BITH", answerName: "Bicknell’s Thrush", type:"song", focusSpecies: true })}
-for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BITH ${i}`, audioUrl: `./clips_vce/BITH_0${i}.mp3`, answerCode: "BITH", answerName: "Bicknell’s Thrush", type:"call", focusSpecies: true })}
+for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BITH ${i}`, audioUrl: `./clips_vce/BITH_0${i}.mp3`, answerCode: "BITH", answerName: "Bicknell’s Thrush", type:"song", focalSpecies: true })}
+for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BITH ${i}`, audioUrl: `./clips_vce/BITH_0${i}.mp3`, answerCode: "BITH", answerName: "Bicknell’s Thrush", type:"call", focalSpecies: true })}
 //BLPW
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"song", focusSpecies: true })}
-for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"call", focusSpecies: true })}
+for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"song", focalSpecies: true })}
+for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"call", focalSpecies: true })}
 //BOCH
-for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BOCH ${i}`, audioUrl: `./clips_vce/BOCH_0${i}.mp3`, answerCode: "BOCH", answerName: "Boreal Chickadee", type:"call", focusSpecies: true })}
+for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BOCH ${i}`, audioUrl: `./clips_vce/BOCH_0${i}.mp3`, answerCode: "BOCH", answerName: "Boreal Chickadee", type:"call", focalSpecies: true })}
 //CMWA
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `CMWA ${i}`, audioUrl: `./clips_vce/CMWA_0${i}.mp3`, answerCode: "CMWA", answerName: "Cape May Warbler", type:"song", focusSpecies: false })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `CMWA ${i}`, audioUrl: `./clips_vce/CMWA_0${i}.mp3`, answerCode: "CMWA", answerName: "Cape May Warbler", type:"song", focalSpecies: false })}
 //DEJU
-for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `DEJU ${i}`, audioUrl: `./clips_vce/DEJU_0${i}.mp3`, answerCode: "DEJU", answerName: "Dark-eyed Junco", type:"song", focusSpecies: false })}
+for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `DEJU ${i}`, audioUrl: `./clips_vce/DEJU_0${i}.mp3`, answerCode: "DEJU", answerName: "Dark-eyed Junco", type:"song", focalSpecies: false })}
 //FOSP
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"song", focusSpecies: true })}
-for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"call", focusSpecies: true })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"song", focalSpecies: true })}
+for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"call", focalSpecies: true })}
 //HETH
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"song", focusSpecies: true })}
-for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"call", focusSpecies: true })}
+for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"song", focalSpecies: true })}
+for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"call", focalSpecies: true })}
 //LEFL
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LEFL ${i}`, audioUrl: `./clips_vce/LEFL_0${i}.mp3`, answerCode: "LEFL", answerName: "Least Flycatcher", type:"song", focusSpecies: false })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LEFL ${i}`, audioUrl: `./clips_vce/LEFL_0${i}.mp3`, answerCode: "LEFL", answerName: "Least Flycatcher", type:"song", focalSpecies: false })}
 //LISP
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LISP ${i}`, audioUrl: `./clips_vce/LISP_0${i}.mp3`, answerCode: "LISP", answerName: "Lincoln's Sparrow", type:"song", focusSpecies: false })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LISP ${i}`, audioUrl: `./clips_vce/LISP_0${i}.mp3`, answerCode: "LISP", answerName: "Lincoln's Sparrow", type:"song", focalSpecies: false })}
 //RCKI
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RCKI ${i}`, audioUrl: `./clips_vce/RCKI_0${i}.mp3`, answerCode: "RCKI", answerName: "Ruby-crowned Kinglet", type:"song", focusSpecies: false })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RCKI ${i}`, audioUrl: `./clips_vce/RCKI_0${i}.mp3`, answerCode: "RCKI", answerName: "Ruby-crowned Kinglet", type:"song", focalSpecies: false })}
 //RESQ
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RESQ ${i}`, audioUrl: `./clips_vce/RESQ_0${i}.mp3`, answerCode: "RESQ", answerName: "Red Squirrel", type:"call", focusSpecies: true })}
+for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RESQ ${i}`, audioUrl: `./clips_vce/RESQ_0${i}.mp3`, answerCode: "RESQ", answerName: "Red Squirrel", type:"call", focalSpecies: true })}
 //SWTH
-for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"song", focusSpecies: true })}
-for(let i=3; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"call", focusSpecies: true })}
+for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"song", focalSpecies: true })}
+for(let i=3; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"call", focalSpecies: true })}
 //VEER
-for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"song", focusSpecies: false })}
-for(let i=3; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"call", focusSpecies: false })}
+for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"song", focalSpecies: false })}
+for(let i=3; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"call", focalSpecies: false })}
 //WIWR
-for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"song", focusSpecies: true })}
-for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"call", focusSpecies: true })}
+for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"song", focalSpecies: true })}
+for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"call", focalSpecies: true })}
 //WTSP
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"song", focusSpecies: true })}
-for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"call", focusSpecies: true })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"song", focalSpecies: true })}
+for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"call", focalSpecies: true })}
 //YBFL
-for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"song", focusSpecies: true })}
-for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"call", focusSpecies: true })}
+for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"song", focalSpecies: true })}
+for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"call", focalSpecies: true })}
 
 
-// This is the list of the focus and sound-alike non-focus birds used in the app
+// This is the list of the focal and sound-alike non-focal birds used in the app
 // The guess options are built from this list
 const birdChoices = [
-    { focusSpecies: true,  code: "BITH", name: "Bicknell's Thrush" }
-  , { focusSpecies: true,  code: "SWTH", name: "Swainson's Thrush" }
-  , { focusSpecies: true,  code: "HETH", name: "Hermit Thrush" }
-  , { focusSpecies: true,  code: "WTSP", name: "White-throated Sparrow" }
-  , { focusSpecies: true,  code: "FOSP", name: "Fox Sparrow" }
-  , { focusSpecies: true,  code: "WIWR", name: "Winter Wren" }
-  , { focusSpecies: true,  code: "BLPW", name: "Blackpoll Warbler" }
-  , { focusSpecies: true,  code: "BCCH", name: "Black-capped Chickadee" }
-  , { focusSpecies: true,  code: "BOCH", name: "Boreal Chickadee" }
-  , { focusSpecies: true,  code: "YBFL", name: "Yellow-bellied Flycatcher" }
-  , { focusSpecies: true,  code: "RESQ", name: "Red Squirrel" }
-  , { focusSpecies: false, code: "VEER", name: "Veery Thrush" }
-  , { focusSpecies: false, code: "RCKI", name: "Ruby-crowned Kinglet" }
-  , { focusSpecies: false, code: "CMWA", name: "Cape May Warbler" }
-  , { focusSpecies: false, code: "BBWA", name: "Bay-breasted Warbler" }
-  , { focusSpecies: false, code: "DEJU", name: "Dark-eyed Junco" }
-  , { focusSpecies: false, code: "LISP", name: "Lincoln's Sparrow" }
-  , { focusSpecies: false, code: "LEFL", name: "Least Flycatcher" }
+    { focalSpecies: true,  code: "BITH", name: "Bicknell's Thrush" }
+  , { focalSpecies: true,  code: "SWTH", name: "Swainson's Thrush" }
+  , { focalSpecies: true,  code: "HETH", name: "Hermit Thrush" }
+  , { focalSpecies: true,  code: "WTSP", name: "White-throated Sparrow" }
+  , { focalSpecies: true,  code: "FOSP", name: "Fox Sparrow" }
+  , { focalSpecies: true,  code: "WIWR", name: "Winter Wren" }
+  , { focalSpecies: true,  code: "BLPW", name: "Blackpoll Warbler" }
+  , { focalSpecies: true,  code: "BCCH", name: "Black-capped Chickadee" }
+  , { focalSpecies: true,  code: "BOCH", name: "Boreal Chickadee" }
+  , { focalSpecies: true,  code: "YBFL", name: "Yellow-bellied Flycatcher" }
+  , { focalSpecies: true,  code: "RESQ", name: "Red Squirrel" }
+  , { focalSpecies: false, code: "VEER", name: "Veery" }
+  , { focalSpecies: false, code: "RCKI", name: "Ruby-crowned Kinglet" }
+  , { focalSpecies: false, code: "CMWA", name: "Cape May Warbler" }
+  , { focalSpecies: false, code: "BBWA", name: "Bay-breasted Warbler" }
+  , { focalSpecies: false, code: "DEJU", name: "Dark-eyed Junco" }
+  , { focalSpecies: false, code: "LISP", name: "Lincoln's Sparrow" }
+  , { focalSpecies: false, code: "LEFL", name: "Least Flycatcher" }
 ];
 
 
@@ -118,7 +118,7 @@ const trainingMode = document.getElementById('trainingMode');
 // With the 3 species options and the 3 voclaization options, there are 9 lists to build
 // =============================
 
-//Cards with all focus and non-focus birds, songs and calls
+//Cards with all focal and non-focal birds, songs and calls
 let cards = []
 let cardsAllBirdsSongsCalls = [...CardList];
 //All birds, songs only
@@ -136,47 +136,47 @@ cardsAllBirdsSongsCalls.forEach(b => {
   }
 })
 
-//Cards with only focus species, songs and calls
-let cardsFocusOnly = [];
+//Cards with only focal species, songs and calls
+let cardsFocalOnly = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if(b.focusSpecies === true) {
-    cardsFocusOnly.push(b);
+  if(b.focalSpecies === true) {
+    cardsFocalOnly.push(b);
   }
 })
-//Focus only, songs only
-let cardsFocusOnlySongs = [];
+//Focal only, songs only
+let cardsFocalOnlySongs = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if(b.focusSpecies === true && b.type.includes('song')) {
-    cardsFocusOnlySongs.push(b);
+  if(b.focalSpecies === true && b.type.includes('song')) {
+    cardsFocalOnlySongs.push(b);
   }
 })
-//Focus only, calls only
-let cardsFocusOnlyCalls = [];
+//Focal only, calls only
+let cardsFocalOnlyCalls = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if(b.focusSpecies === true && b.type.includes('call')) {
-    cardsFocusOnlyCalls.push(b);
+  if(b.focalSpecies === true && b.type.includes('call')) {
+    cardsFocalOnlyCalls.push(b);
   }
 })
 
-//Cards with only non-focus species, songs and calls
-let cardsNonFocusOnly = [];
+//Cards with only non-focal species, songs and calls
+let cardsNonFocalOnly = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if(b.focusSpecies !== true) {
-    cardsNonFocusOnly.push(b);
+  if(b.focalSpecies !== true) {
+    cardsNonFocalOnly.push(b);
   }
 })
-//Non-focus, songs only
-let cardsNonFocusOnlySongs = [];
+//Non-focal, songs only
+let cardsNonFocalOnlySongs = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if( b.focusSpecies !== true && b.type.includes('song') ) {
-    cardsNonFocusOnlySongs.push(b);
+  if( b.focalSpecies !== true && b.type.includes('song') ) {
+    cardsNonFocalOnlySongs.push(b);
   }
 })
-//Non-focus, calls only
-let cardsNonFocusOnlyCalls = [];
+//Non-focal, calls only
+let cardsNonFocalOnlyCalls = [];
 cardsAllBirdsSongsCalls.forEach(b => {
-  if( b.focusSpecies !== true && b.type.includes('call') ) {
-    cardsNonFocusOnlyCalls.push(b);
+  if( b.focalSpecies !== true && b.type.includes('call') ) {
+    cardsNonFocalOnlyCalls.push(b);
   }
 })
 
@@ -212,7 +212,7 @@ let stats = {
 // init answer items
 let answeredThisCard = false;
 let useNameOrCodes = 'useNames';
-let birdSelection = 'focus';
+let birdSelection = 'focal';
 let vocalizationType = 'songcall';
 
 //init the cards population
@@ -345,18 +345,18 @@ function renderChoices(card) {
 
   //loop through all the options and display the guess options that match the current mode
   birdChoices.forEach(bird => {
-    //show focus, non-focus, or all birds
+    //show focal, non-focal, or all birds
     if(  (birdSelection==='all') 
-      || (birdSelection==='focus' && bird.focusSpecies === true)
-      || (birdSelection==='nonFocus' && bird.focusSpecies === false)
+      || (birdSelection==='focal' && bird.focalSpecies === true)
+      || (birdSelection==='nonFocal' && bird.focalSpecies === false)
     ) {
       //create new element
       const btn = document.createElement('button');
       //add the appropriate css classes
-      if (bird.focusSpecies === true) {
-        btn.className = `choice focus ${bird.code}`;
-      } else if (bird.focusSpecies === false) {
-        btn.className = `choice not-focus ${bird.code}`;
+      if (bird.focalSpecies === true) {
+        btn.className = `choice focal ${bird.code}`;
+      } else if (bird.focalSpecies === false) {
+        btn.className = `choice not-focal ${bird.code}`;
       } else {
         btn.className = `choice ${bird.code}`;
       }
@@ -601,19 +601,19 @@ function setTheCardsVariable() {
   } else if(birdSelection==='all' && vocalizationType==='call') {
     cards = structuredClone(cardsAllBirdsCalls);
 
-  }  else if(birdSelection==='focus' && vocalizationType==='songcall') {
-    cards = structuredClone(cardsFocusOnly);
-  }  else if(birdSelection==='focus' && vocalizationType==='song') {
-    cards = structuredClone(cardsFocusOnlySongs);
-  }  else if(birdSelection==='focus' && vocalizationType==='call') {
-    cards = structuredClone(cardsFocusOnlyCalls);
+  }  else if(birdSelection==='focal' && vocalizationType==='songcall') {
+    cards = structuredClone(cardsFocalOnly);
+  }  else if(birdSelection==='focal' && vocalizationType==='song') {
+    cards = structuredClone(cardsFocalOnlySongs);
+  }  else if(birdSelection==='focal' && vocalizationType==='call') {
+    cards = structuredClone(cardsFocalOnlyCalls);
 
-  }  else if(birdSelection==='nonFocus' && vocalizationType==='songcall') {
-    cards = structuredClone(cardsNonFocusOnly);
-  }  else if(birdSelection==='nonFocus' && vocalizationType==='song') {
-    cards = structuredClone(cardsNonFocusOnlySongs);
-  }  else if(birdSelection==='nonFocus' && vocalizationType==='call') {
-    cards = structuredClone(cardsNonFocusOnlyCalls);
+  }  else if(birdSelection==='nonFocal' && vocalizationType==='songcall') {
+    cards = structuredClone(cardsNonFocalOnly);
+  }  else if(birdSelection==='nonFocal' && vocalizationType==='song') {
+    cards = structuredClone(cardsNonFocalOnlySongs);
+  }  else if(birdSelection==='nonFocal' && vocalizationType==='call') {
+    cards = structuredClone(cardsNonFocalOnlyCalls);
   }
 
 }

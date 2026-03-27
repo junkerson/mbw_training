@@ -2,7 +2,7 @@
 
 This is a simple, standalone, one-page browser app that is essentially an audio flashcard tool designed to help with training for the Mountain Birdwatch Project.
 
-Mountain Birdwatch is a citizen science project where volunteers scale mountain peaks all around the northeastern United States every June and count how many birds of the focus species they can hear or see.
+Mountain Birdwatch is a citizen science project where volunteers scale mountain peaks all around the northeastern United States every June and count how many birds of the focal species they can hear or see.
 This app aims to help train the volunteers' ears to recognize the calls of the desired birds, as well as identify a few that sound similar but are not part of the study.
 
 Additional information about the project, and the Vermont Center for Ecostudies which runs it, can be found here: https://vtecostudies.org/projects/mountains/mountain-birdwatch/
@@ -51,7 +51,7 @@ Don't be afraid to click on them all and see what happens.
 Some option changes will reset stats so make note of the stats, if you'd like, before experimenting.
 
 * The "Show Bird Names" and "Show 4-Character Codes" radio buttons switch what the labels on the guess buttons read. It defaults to Show Bird Names.
-* The "Focus Birds Only", "Non-Focus Birds Only", "Focus and Non-Focus Birds" radio buttons determine the selection of birds that will be used for the queue cards. It defaults to Focus Birds Only. _Note that switching to a new population option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
+* The "Focal Birds Only", "Non-Focal Birds Only", "Focal and Non-Focal Birds" radio buttons determine the selection of birds that will be used for the queue cards. It defaults to Focal Birds Only. _Note that switching to a new population option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
 * The "All Vocalizations", "Songs Only", and "Calls Only" radio buttons determine which types of vocalizations will be used for the queue cards. It defauts to All Vocalizations  _Note that switching to a new vocalization option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
 * The "Autoplay audio when new sample loads" checkbox determines if the clip plays automatically when moving to a new card, or if you have to click the play button each time. It defaults to Autoplay.
 * The "Show bird and audio codes in the card queue" checkbox updates the labels on the queue card to show the 4-Character Codes and the clip number. This is helpful if you need to do some additional familiarization with specific birds. It defaults to unchecked.

@@ -4,13 +4,22 @@
   --card: #0b1220;
   --accent: #06b6d4;
   --muted: #94a3b8;
-  --success: #16a34a;
-  --danger: #ef4444;
+  /* old red/green colors
+  --correct-color: #16a34a;
+  --incorrect-color: #ef4444;
+  */
+  --correct-color: #6c98c8;  
+  --incorrect-color: #c57508;
+  --correct-color-faded: #6c98c822;
+  --incorrect-color-faded: #c5750822;
+  
   --glass: rgba(255, 255, 255, 0.03);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   color: #e6eef6;
-  --focus: " \2611";
-  --not-focus: " \2612";
+  --focal: " \2611";
+  --not-focal: " \2612";
+  --focal-color:#16a34a;
+  --not-focal-color:rgb(243, 155, 122);
 }
 
 /* prev/next button animations */
@@ -114,7 +123,7 @@ h2, h3 {
   font-size: 12px;
 }
 
-.nameOrCodesContainer, .autoplayContainer, .includeNonFocusContainer, .trainingModeContainer, .birdSelectionContiner, .vocalizationTypeContainer {  
+.nameOrCodesContainer, .autoplayContainer, .trainingModeContainer, .birdSelectionContainer, .vocalizationTypeContainer {  
   padding: 10px 14px;
   border-radius: 8px;
   display: flex;
@@ -160,30 +169,28 @@ h2, h3 {
   color: var(--muted);
 }
 
-.focus-ind, .not-focus-ind {
+.focal-ind, .not-focal-ind {
   display: inline-block;
 }
 
-.choice.focus::after, .focus-ind::after {
-  content: var(--focus);
-  color: #16a34a;
+.choice.focal::after, .focal-ind::after {
+  content: var(--focal);
+  color: var(--focal-color);
   font-size: 1.3em;
 }
 
-.choice.not-focus::after, .not-focus-ind::after {
-  content: var(--not-focus);
-  color: coral;
+.choice.not-focal::after, .not-focal-ind::after {
+  content: var(--not-focal);
+  color: var(--not-focal-color);
   font-size: 1.3em;
 }
 
 .choice.correct {
-  border-color: var(--success);
-  background: linear-gradient(90deg, rgba(22, 163, 74, 0.08), rgba(22, 163, 74, 0.02));
+  border-color: var(--correct-color);
 }
 
 .choice.incorrect {
-  border-color: var(--danger);
-  background: linear-gradient(90deg, rgba(239, 68, 68, 0.06), rgba(239, 68, 68, 0.02));
+  border-color: var(--incorrect-color);
 }
 
 #feedback {
@@ -191,11 +198,13 @@ h2, h3 {
 }
 
 #feedback.correct {
-  background-color: rgba(0, 255, 0, 0.05);
+  background-color: var(--correct-color-faded);
+  
 }
 
 #feedback.incorrect {
   background-color: rgba(255, 0, 0, 0.05);
+  background-color: var(--incorrect-color-faded);
 }
 
 .controls {
@@ -261,6 +270,11 @@ input[type="file"] {
   line-height: 20px;
 }
 
+.zoom-instructions {
+  display: inline-block;
+  margin: 0 3em 0 0;
+}
+
 
 #queueList {
   display: flex;
@@ -270,14 +284,15 @@ input[type="file"] {
 }
 
 .queueCard {
-  min-width: 2em;
-  height: 1.5em;
+  min-width: 3em;
+  height: 2.5em;
   padding:0.5em;
   background-color:#444;
   color:#000;
   border-radius: 10%;
   text-align:center;
   cursor: pointer ;
+  box-sizing: border-box;
 }
 
 .queueCard:not(.currentCard) {
@@ -286,18 +301,19 @@ input[type="file"] {
 
 .currentCard {  
   background-color: #aaa;
+  border: 2px solid #aaa;
 }
 
 .cardCorrect:not(.cardIncorrect) {
-  background-color: #16a34a;
+  background-color: var(--correct-color);
 }
 
 .cardIncorrect:not(.cardCorrect) {
-  background-color: #c33;
+  background-color: var(--incorrect-color);
 }
 
 .cardIncorrect.cardCorrect {
-  background: linear-gradient(90deg, #16a34a, #16a34a 50%, #c33 50%, #c33);
+  background: linear-gradient(90deg, var(--correct-color), var(--correct-color) 50%, var(--incorrect-color) 50%, var(--incorrect-color));
 }
 
 #shuffleBtn {
