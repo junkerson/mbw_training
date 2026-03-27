@@ -1,21 +1,16 @@
 /* Defaulting stuff */
 :root {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color: #e6eef6;
+
   --bg: #0f1724;
   --card: #0b1220;
   --accent: #06b6d4;
   --muted: #94a3b8;
-  /* old red/green colors
-  --correct-color: #16a34a;
-  --incorrect-color: #ef4444;
-  */
   --correct-color: #6c98c8;  
   --incorrect-color: #c57508;
   --correct-color-faded: #6c98c822;
   --incorrect-color-faded: #c5750822;
-  
-  --glass: rgba(255, 255, 255, 0.03);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #e6eef6;
   --focal: " \2611";
   --not-focal: " \2612";
   --focal-color:#16a34a;
@@ -270,9 +265,9 @@ input[type="file"] {
   line-height: 20px;
 }
 
-.zoom-instructions {
+.shortcut-instructions {
   display: inline-block;
-  margin: 0 3em 0 0;
+  margin: 0 2em 0 0;
 }
 
 
