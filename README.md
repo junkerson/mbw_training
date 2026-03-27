@@ -12,22 +12,26 @@ Additional information about the project, and the Vermont Center for Ecostudies 
 > The Vermont Center for Ecostudies is not involved in its creation or maintenance.
 
 
-## Installation
+## Usage and Downloading
 The app is an html/javascript program that should run in any modern web browser.
 It is best suited for computer screens due to size and layout.
 It might be usable on a tablet, but probably would be difficult to use on a mobile device with its smaller screen.
-No internet connectivity is required.
 
-To "install", do the following:
+You can use this app online via the GitHub Pages functionality at:
+https://junkerson.github.io/mbw_training/
+
+If you would like to download a copy to use locally, do the following:
 1. Go to https://github.com/junkerson/mbw_training
 2. Look for the "<> Code" button and click on it then select Downoad ZIP
 3. Save the ZIP to your computer
 4. Unzip the contents of the ZIP file to a convenient location
 5. Open the "index.html" file in root folder in a modern browser
 6. The application should come up ready to use
+7. No internet connectivity is required when using a local copy
 
 
-## Usage
+
+## Basic Instructions
 I strived to keep usage of the app fairly intuitive.
 
 The playback controls, buttons for guessing, and options are in the left pane.  
@@ -48,13 +52,13 @@ This feature can be helpful once you've gone through all the cards and would lik
 #### Options
 The options are hopefully fairly self explanatory.  
 Don't be afraid to click on them all and see what happens.  
-Some option changes will reset stats so make note of the stats, if you'd like, before experimenting.
+Some option changes will reset stats so make note of those tallies, if you'd like, before experimenting.
 
-* The "Show Bird Names" and "Show 4-Character Codes" radio buttons switch what the labels on the guess buttons read. It defaults to Show Bird Names.
-* The "Focal Birds Only", "Non-Focal Birds Only", "Focal and Non-Focal Birds" radio buttons determine the selection of birds that will be used for the queue cards. It defaults to Focal Birds Only. _Note that switching to a new population option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
+* The "Show Species Names" and "Show Species Codes" radio buttons switch what the labels on the guess buttons read. It defaults to Show Species Names.
+* The "Focal Species Only", "Non-Focal Species Only", "All Species" radio buttons determine the selection of species that will be used for the queue cards. It defaults to Focal Species Only. _Note that switching to a new population option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
 * The "All Vocalizations", "Songs Only", and "Calls Only" radio buttons determine which types of vocalizations will be used for the queue cards. It defauts to All Vocalizations  _Note that switching to a new vocalization option will reset queue and any correct/incorrect indicators. It will not reset the statistics._
-* The "Autoplay audio when new sample loads" checkbox determines if the clip plays automatically when moving to a new card, or if you have to click the play button each time. It defaults to Autoplay.
-* The "Show bird and audio codes in the card queue" checkbox updates the labels on the queue card to show the 4-Character Codes and the clip number. This is helpful if you need to do some additional familiarization with specific birds. It defaults to unchecked.
+* The "Autoplay when new sample loads" checkbox determines if the clip plays automatically when moving to a new card, or if you have to click the play button each time. It defaults to Autoplay.
+* The "Card Queue: Reveal species codes and sort alphabetically" checkbox updates the labels on the queue card to show the 4-character species codes and the clip number. This is helpful if you need to do some additional familiarization with specific birds. It also sorts the cards alphabetically so it is easier to findparticular vocalizations. It defaults to unchecked.
 * You can also manually reset and shuffle the queue by pressing the "Reset and Shuffle" button.
 * You can completely reset the session and all statistics with the "Restart Session" button.
 
@@ -71,14 +75,12 @@ Click on a blank area of the page to take the focus off the options if the short
 
 
 ## Troubleshooting
-This app works well on my computers, but I have done next to no testing on other systems.
 Since this is written in basic HTML, CSS, and vanilla Javascript, this should run fine on any modern browser, but results may vary.
 
 A few things of note:
 1. Sometimes, especially when playing the first clip after loading the app, it takes several seconds to start playing the audio. Usually, any subsequent clips play fine without delay. I'll troubleshoot at some point to see if I can improve the performance, but at the moment I just consider it a minor incovenience.
 2. The key shortcuts do not work if you've clicked on one of the option items and it still has focus. Click on a blank part of the screen and the key shortcuts should start working again. I'll see if I can figure out a way to get around that issue.
 3. This app does not save any statistics between sessions. Once you reload the page or close the browser (or hit the Restart Session button) any stats and indicators will be lost. Using this myself, I haven't seen any real need to persist data across sessions, but I might look into ading that feature at some point.
-4. Yes, there's quite a bit of red and green indicators used. Apologies to anyone who has trouble differentiating those colors. It hopefully does not limit usability too much.
 
 
 ## Permissions and Copyright
