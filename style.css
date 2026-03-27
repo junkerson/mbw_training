@@ -114,7 +114,7 @@ h2, h3 {
   font-size: 12px;
 }
 
-.nameOrCodesContainer, .autoplayContainer, .includeNonFocusContainer, .trainingModeContainer, .birdSelectionContiner {  
+.nameOrCodesContainer, .autoplayContainer, .includeNonFocusContainer, .trainingModeContainer, .birdSelectionContiner, .vocalizationTypeContainer {  
   padding: 10px 14px;
   border-radius: 8px;
   display: flex;
@@ -281,7 +281,7 @@ input[type="file"] {
 }
 
 .queueCard:not(.currentCard) {
-  opacity: 30%;;
+  opacity: 50%;;
 }
 
 .currentCard {  

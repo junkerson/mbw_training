@@ -57,13 +57,20 @@
               <div><input type="radio" name="birdSelection" id="all" value="all" class="small"> <label for="all">Focus and Non-Focus Birds</label></div>                         
               <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
             </div>
+
+            <div class="vocalizationTypeContainer">
+              <div><input type="radio" name="vocalizationType" id="all" value="songcall" class="small" checked> <label for="all">All Vocalizations</label></div>
+              <div><input type="radio" name="vocalizationType" id="song" value="song" class="small"> <label for="nonFocus">Songs Only</label></div>              
+              <div><input type="radio" name="vocalizationType" id="call" value="call" class="small"> <label for="all">Calls Only</label></div>
+              <div class="super-small-muted">(Changing this resets and shuffles queue)</div> 
+            </div>
             
             <div class="autoplayContainer">
               <div><input type="checkbox" id="autoPlay" checked /> Autoplay audio when new sample loads</div>
             </div>
 
             <div class="trainingModeContainer">
-              <div><input type="checkbox" id="trainingMode" />Selection Mode: show bird and audio clip codes in the card queue</div>
+              <div><input type="checkbox" id="trainingMode" />Show bird and audio codes in the card queue. Cards are listed alphabetically.</div>
             </div>
           </div>
         </section>
