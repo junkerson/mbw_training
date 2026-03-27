@@ -13,8 +13,6 @@ const CardList = [];
 //    - BCCH_03.mp3
 // The code's used can be found here: https://www.birdpop.org/docs/misc/Alpha_codes_eng.pdf
 
-let tempBirdObj = null;
-
 //BBWA
 for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BBWA ${i}`, audioUrl: `./clips_vce/BBWA_0${i}.mp3`, answerCode: "BBWA", answerName: "Bay-breasted Warbler", type:"song", focusSpecies: false })}
 //BCCH
@@ -26,39 +24,39 @@ for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BITH $
 //BLPW
 for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"song", focusSpecies: true })}
 for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BLPW ${i}`, audioUrl: `./clips_vce/BLPW_0${i}.mp3`, answerCode: "BLPW", answerName: "Blackpoll Warbler", type:"call", focusSpecies: true })}
-//BOCH loop
+//BOCH
 for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `BOCH ${i}`, audioUrl: `./clips_vce/BOCH_0${i}.mp3`, answerCode: "BOCH", answerName: "Boreal Chickadee", type:"call", focusSpecies: true })}
-//CMWA loop
+//CMWA
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `CMWA ${i}`, audioUrl: `./clips_vce/CMWA_0${i}.mp3`, answerCode: "CMWA", answerName: "Cape May Warbler", type:"song", focusSpecies: false })}
-//DEJU loop
+//DEJU
 for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `DEJU ${i}`, audioUrl: `./clips_vce/DEJU_0${i}.mp3`, answerCode: "DEJU", answerName: "Dark-eyed Junco", type:"song", focusSpecies: false })}
-//FOSP loop
+//FOSP
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"song", focusSpecies: true })}
 for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `FOSP ${i}`, audioUrl: `./clips_vce/FOSP_0${i}.mp3`, answerCode: "FOSP", answerName: "Fox Sparrow", type:"call", focusSpecies: true })}
-//HETH loop
+//HETH
 for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"song", focusSpecies: true })}
 for(let i=4; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `HETH ${i}`, audioUrl: `./clips_vce/HETH_0${i}.mp3`, answerCode: "HETH", answerName: "Hermit Thrush", type:"call", focusSpecies: true })}
-//LEFL loop
+//LEFL
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LEFL ${i}`, audioUrl: `./clips_vce/LEFL_0${i}.mp3`, answerCode: "LEFL", answerName: "Least Flycatcher", type:"song", focusSpecies: false })}
-//LISP loop
+//LISP
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `LISP ${i}`, audioUrl: `./clips_vce/LISP_0${i}.mp3`, answerCode: "LISP", answerName: "Lincoln's Sparrow", type:"song", focusSpecies: false })}
-//RCKI loop
+//RCKI
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RCKI ${i}`, audioUrl: `./clips_vce/RCKI_0${i}.mp3`, answerCode: "RCKI", answerName: "Ruby-crowned Kinglet", type:"song", focusSpecies: false })}
-//RESQ loop
+//RESQ
 for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `RESQ ${i}`, audioUrl: `./clips_vce/RESQ_0${i}.mp3`, answerCode: "RESQ", answerName: "Red Squirrel", type:"call", focusSpecies: true })}
-//SWTH loop
+//SWTH
 for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"song", focusSpecies: true })}
 for(let i=3; i<=5; ++i){ CardList.push({ id: crypto.randomUUID(), title: `SWTH ${i}`, audioUrl: `./clips_vce/SWTH_0${i}.mp3`, answerCode: "SWTH", answerName: "Swainson's Thrush", type:"call", focusSpecies: true })}
-//VEER loop
+//VEER
 for(let i=1; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"song", focusSpecies: false })}
 for(let i=3; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `VEER ${i}`, audioUrl: `./clips_vce/VEER_0${i}.mp3`, answerCode: "VEER", answerName: "Veery", type:"call", focusSpecies: false })}
-//WIWR loop
+//WIWR
 for(let i=1; i<=3; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"song", focusSpecies: true })}
 for(let i=4; i<=4; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WIWR ${i}`, audioUrl: `./clips_vce/WIWR_0${i}.mp3`, answerCode: "WIWR", answerName: "Winter Wren", type:"call", focusSpecies: true })}
-//WTSP loop
+//WTSP
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"song", focusSpecies: true })}
 for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `WTSP ${i}`, audioUrl: `./clips_vce/WTSP_0${i}.mp3`, answerCode: "WTSP", answerName: "White-throated Sparrow", type:"call", focusSpecies: true })}
-//YBFL loop
+//YBFL
 for(let i=1; i<=1; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"song", focusSpecies: true })}
 for(let i=2; i<=2; ++i){ CardList.push({ id: crypto.randomUUID(), title: `YBFL ${i}`, audioUrl: `./clips_vce/YBFL_0${i}.mp3`, answerCode: "YBFL", answerName: "Yellow-bellied Flycatcher", type:"call", focusSpecies: true })}
 
@@ -278,6 +276,7 @@ function birdSelectionOnChangeHandler(event, bSel) {
 
   currentIndex = 0;
 
+  //update the interface
   animateQueueList();
   resetQueueData();
   loadCurrentCard();  
@@ -291,8 +290,11 @@ vocalizationTypeRadios.forEach(radio => {
     vocalizationType = radio.value;
 
     setTheCardsVariable(); //determine which cards to use 
+    
     shuffleQueue();
+    
     currentIndex = 0;
+
     //update the interface
     animateQueueList();
     resetQueueData();
@@ -303,7 +305,7 @@ vocalizationTypeRadios.forEach(radio => {
 
 //Handle training mode change
 trainingMode.addEventListener('change', function() {
-  // the two functions below look at the checkbox status to determine display
+  // the two functions below look at the option values to determine display
   // all that's needed is to call them and let them do their thing
   renderQueue();
   loadCurrentCard();
@@ -334,6 +336,7 @@ function loadCurrentCard() {
   //show on UI
   renderChoices(card);
 }
+
 
 //Render the choice options to the UI
 function renderChoices(card) {
@@ -412,7 +415,7 @@ function handleChoice(card, selected, btnEl) {
     // highlight correct choice    
     document.getElementsByClassName(card.answerCode)[0].classList.add('correct')
     //add visual feedback 
-    feedback.textContent = `Incorrect. Correct answer: ${card.answerName} (${card.answerCode})`;
+    feedback.textContent = `Incorrect.  Correct answer: ${card.answerName} (${card.answerCode})`;
     feedback.style.color = '';
     feedback.className = 'incorrect';
     //update queue card stats
@@ -568,12 +571,11 @@ function resetQueueData() {
 
   //rebuild the data with defaults
   for ( let i=0; i<queue.length; ++i ) {
-    // queueData.push({guesses:0,correct:0,incorrect:0});
     queueData[queue[i]] = ({guesses:0,correct:0,incorrect:0});
   }
 }
 
-//Show a visual indication that queuewas reset
+//Show a visual indication that queue was reset
 //Essentially just attaching a CSS class that plays a CSS animation
 function animateQueueList() {
   queueList.classList.remove("queueShuffleAnim");  
@@ -589,7 +591,7 @@ function animateButton(el) {
   el.classList.add("buttonClickAnim");
 }
 
-// Looks at the bird selection and vocalization selection to determine which cards to use
+// Looks at the bird selection and vocalization options to determine which cards to use
 function setTheCardsVariable() {
 
   if(birdSelection==='all' && vocalizationType==='songcall') {
