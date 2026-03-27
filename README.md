@@ -17,7 +17,7 @@ The app is an html/javascript program that should run in any modern web browser.
 It is best suited for computer screens due to size and layout.
 It might be usable on a tablet, but probably would be difficult to use on a mobile device with its smaller screen.
 
-You can use this app online via the GitHub Pages functionality at:
+You can use this app online via the GitHub Pages functionality at:  
 https://junkerson.github.io/mbw_training/
 
 If you would like to download a copy to use locally, do the following:
